@@ -1,0 +1,54 @@
+.light.component {
+
+  .mount {
+    $mountSize: 50px;
+    position: relative;
+    width: $mountSize;
+    height: $mountSize;
+  }
+
+  .ring,
+  .bulb {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    border-radius: 50%;
+  }
+
+  .ring {
+    background: silver;
+    border: solid 1px #000;
+
+    &.outer {
+      $ringOuterSize: 50px;
+      width: $ringOuterSize;
+      height: $ringOuterSize;
+    }
+
+    &.inner {
+      $ringInnerSize: 40px;
+      width: $ringInnerSize;
+      height: $ringInnerSize;
+    }
+  }
+
+  .bulb {
+    $bulbSize: 35px;
+    width: $bulbSize;
+    height: $bulbSize;
+
+    background: rgb(100,0,0);
+  }
+
+  .light.body.on .bulb {
+    background: rgb(160,0,0);
+    $bulbShadowYellow: 0 0 8px 0px rgba(255, 200, 0,0.8) inset;
+    $bulbShadowRed: 0 0 21px 0px rgba(255,0,0,0.9) inset;
+    box-shadow: $bulbShadowRed, $bulbShadowYellow;
+    //box-shadow: $bulbShadowYellow, $bulbShadowRed;
+  }
+}

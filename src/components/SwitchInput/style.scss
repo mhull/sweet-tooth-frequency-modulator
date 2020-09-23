@@ -1,0 +1,102 @@
+.switch-input.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  input {
+    display: none;
+  }
+
+  .switch.body {
+    cursor: pointer;
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+
+  .ring {
+    border-radius: 50%;
+    background: silver;
+    border: solid black 1px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    &.inner {
+      $innerRingSize: 30px;
+      width: $innerRingSize;
+      height: $innerRingSize;
+    }
+
+    &.outer {
+      background: silver;
+      $outerRingSize: 40px;
+      width: $outerRingSize;
+      height: $outerRingSize;
+    }
+  }
+
+  .socket {
+    position: absolute;
+    left: -1px;
+    right: 0;
+    top: -1px;
+    bottom: 0;
+    margin: auto;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    border: solid 1px black;
+    box-shadow: inset 0 0 1px;
+    z-index: 1;
+  }
+
+  .toggle {
+    position: absolute;
+
+    bottom: 46%;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    background: silver;
+    border: solid 1px black;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+
+    height: 35px;
+    width: 12px;
+    z-index: 2;
+    transform-origin: bottom;
+    transform: rotate(170deg) rotateX(45deg);
+
+    clip-path: polygon(
+        0 0, /* left top */
+        100% 0, /* right top */
+        99% 95%, /* right bottom */
+        1% 92% /* left bottom */
+    );
+  }
+
+  .switch.body.on .toggle {
+    bottom: 55%;
+    transform: rotate(10deg) rotateX(45deg);
+  }
+}

@@ -1,0 +1,37 @@
+div.knob.component {
+  $knobSize: 80px;
+  $knobColor: #000;
+  $knobStrokeWidth: 0.618;
+
+
+  label, input {
+    display: none;
+  }
+
+  .knob.body {
+    height: $knobSize;
+    width: $knobSize;
+
+    position: relative;
+
+    cursor: pointer;
+    transform-origin: center;
+
+    .hexagon.knob {
+      fill: $knobColor;
+      stroke-linejoin: round;
+      stroke: $knobColor;
+      stroke-width: $knobStrokeWidth;
+    }
+
+    .hexagon.notch {
+      stroke: linen;
+      stroke-width: 0.1;
+      fill: mintcream;
+    }
+  }
+
+  .knob.body:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,55 @@
+@mixin centerAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+
+  @include centerAll;
+
+  #device {
+    @include centerAll;
+    flex-wrap: wrap;
+
+    width: 250px;
+
+    background: lightslategray;
+    border-radius: 5px;
+    border: solid #000 1px;
+    padding: 30px 10px 10px;
+  }
+
+  .break {
+    flex-basis: 100%;
+  }
+
+  .h-space {
+    flex-grow: 1;
+  }
+
+  .v-space {
+    height: 20px;
+  }
+
+  label, .label {
+    color: #fff;
+  }
+
+  #volume-label,
+  #freq-label {
+    flex-grow: 1;
+  }
+
+  #volume-label {
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  #freq-label {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
