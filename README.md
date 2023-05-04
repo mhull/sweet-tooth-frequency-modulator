@@ -1,14 +1,17 @@
 # Sweet Tooth🍦 &ndash; Frequency Modulator
 
-😈 Demon-possessed ice cream truck vibes 🎶
+Sounds like either an ice cream truck or a theremin. You pick! May or may not be possessed by spirits.
+
+[Play with the demo](https://mhull.github.io/sweet-tooth-frequency-modulator/) and view usage notes below.
 
 ## Usage
 
 - `POWER` Turn Sweet Tooth on or off
-- `MUS` Use Sweet Tooth in musical scale mode
-- `THRM` Use Sweet Tooth in theremin mode
+- `FREQ` Increase or decrease the frequency that Sweet Tooth is producing. The effect depends on how `MUS` is set
 - `VOL` Increase or decrease Sweet Tooth's volume
-- `FREQ` Increase or decrease the frequency that Sweet Tooth is producing
+- `MUS` Use Sweet Tooth in musical scale (ice cream truck) mode
+- `THRM` Use Sweet Tooth in theremin mode
+- `POSS` Whether or not Sweet Tooth should be possessed by spirits (adds a multi-tiered, slightly detuned delay effect)
 
 ## Bonus: Bagpipe mode
 
